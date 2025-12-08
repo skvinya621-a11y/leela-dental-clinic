@@ -1,0 +1,768 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Leela Dental Clinic — Premium Landing</title>
+
+  <style>
+    /* --- Theme variables --- */
+    :root {
+      --accent: #ff7a2b;
+      --accent-2: #ff8f51;
+      --nav-bg: #10202f;
+      --muted: #6b7280;
+      --surface: #fff6f2;
+      --card: #ffffff;
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(16, 24, 40, 0.08);
+      --max-width: 1180px;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: var(--surface);
+      color: var(--nav-bg);
+      -webkit-font-smoothing: antialiased
+    }
+
+    a {
+      color: inherit
+    }
+
+    .container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 18px
+    }
+
+    header {
+      background: var(--card);
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(16, 24, 40, 0.04)
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px
+    }
+
+    .logo {
+      width: 64px;
+      height: 44px;
+      border-radius: 10px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 20px
+    }
+
+    .brand-name {
+      font-size: 20px;
+      font-weight: 900
+    }
+
+    .brand-sub {
+      font-size: 13px;
+      color: var(--muted)
+    }
+
+    .phone-cta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: #fff;
+      font-weight: 800
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 24px;
+      align-items: start;
+      padding: 28px 0
+    }
+
+    .hero-left {
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      border-radius: var(--radius);
+      color: #fff;
+      padding: 36px;
+      box-shadow: var(--shadow);
+      position: relative
+    }
+
+    .hero-left h1 {
+      font-size: 40px;
+      line-height: 1.02;
+      margin: 0;
+      font-weight: 900;
+      text-transform: uppercase
+    }
+
+    .hero-left p {
+      margin-top: 12px;
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.95)
+    }
+
+    .badge-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 22px
+    }
+
+    .badge {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 800
+    }
+
+    .offer-row {
+      display: flex;
+      gap: 16px;
+      margin-top: 22px
+    }
+
+    .offer {
+      background: rgba(255, 255, 255, 0.12);
+      padding: 12px 16px;
+      border-radius: 999px;
+      font-weight: 900
+    }
+
+    .offer-highlight {
+      background: #fff;
+      color: var(--accent);
+      padding: 10px 14px;
+      border-radius: 999px;
+      font-weight: 900
+    }
+
+    .metrics {
+      display: flex;
+      gap: 12px;
+      overflow: auto;
+      margin-top: 18px;
+      padding: 10px;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.06)
+    }
+
+    .metric {
+      min-width: 140px;
+      padding: 8px;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.06);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center
+    }
+
+    .metric strong {
+      font-size: 16px
+    }
+
+    .metric small {
+      font-size: 13px;
+      opacity: 0.9
+    }
+
+    .form-card {
+      background: var(--card);
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .form-card h3 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--nav-bg)
+    }
+
+    .form-row {
+      display: flex;
+      flex-direction: column;
+      gap: 12px
+    }
+
+    .input,
+    textarea {
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid rgba(16, 24, 40, 0.06);
+      font-size: 14px
+    }
+
+    .submit {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #fff;
+      padding: 12px;
+      border-radius: 10px;
+      border: none;
+      font-weight: 900;
+      cursor: pointer
+    }
+
+    .consent {
+      font-size: 13px;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      align-items: flex-start
+    }
+
+    section {
+      margin-top: 32px
+    }
+
+    .section-inner {
+      background: var(--card);
+      padding: 22px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(16, 24, 40, 0.04)
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 16px
+    }
+
+    .service-card {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      min-height: 220px;
+      display: flex;
+      align-items: flex-end;
+      padding: 16px;
+      color: #fff;
+      box-shadow: 0 6px 20px rgba(16, 24, 40, 0.06);
+      background: linear-gradient(135deg,
+          rgba(255, 122, 43, 0.9),
+          rgba(255, 143, 81, 0.9));
+    }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+          rgba(0, 0, 0, 0.18),
+          rgba(0, 0, 0, 0.28));
+    }
+
+    .service-content {
+      position: relative;
+      z-index: 2
+    }
+
+    .service-card h4 {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 900
+    }
+
+    .service-card p {
+      margin: 6px 0 0;
+      font-size: 14px;
+      opacity: 0.95
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px
+    }
+
+    .review {
+      background: var(--card);
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(16, 24, 40, 0.04);
+      cursor: pointer;
+      transition: 0.35s
+    }
+
+    .review.open {
+      transform: scale(1.05);
+      box-shadow: 0 0 18px rgba(255, 122, 43, 0.45);
+      border: 2px solid var(--accent)
+    }
+
+    .review small {
+      display: block;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, opacity 0.3s;
+      opacity: 0
+    }
+
+    .review.open small {
+      max-height: 100px;
+      opacity: 1
+    }
+
+    .review .react {
+      margin-top: 8px;
+      font-size: 18px;
+      opacity: 0;
+      transition: 0.3s
+    }
+
+    .review.open .react {
+      opacity: 1
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .badge-row-hero .badge {
+      background: rgba(255, 143, 81, 0.12);
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 800;
+      cursor: pointer
+    }
+
+    .badge-row-hero .badge.active {
+      background: #fff;
+      color: var(--accent);
+      box-shadow: 0 6px 18px rgba(255, 122, 43, 0.12)
+    }
+
+    .badge-row-hero .badge.inactive {
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+      color: #fff
+    }
+
+    @media(max-width:980px) {
+      .hero {
+        grid-template-columns: 1fr 360px
+      }
+    }
+
+    @media(max-width:760px) {
+      .hero {
+        grid-template-columns: 1fr
+      }
+
+      .metrics {
+        justify-content: flex-start
+      }
+
+      .reviews {
+        grid-template-columns: 1fr
+      }
+    }
+
+    /* FAQ tabs */
+    .faq-tabs{margin-top:12px}
+    .tab-controls{display:flex;gap:8px;flex-wrap:wrap}
+    .tab-btn{background:transparent;border:1px solid rgba(16,24,40,0.06);padding:8px 12px;border-radius:10px;cursor:pointer;font-weight:800}
+    .tab-btn.active{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;border-color:transparent;box-shadow:0 8px 30px rgba(255,122,43,0.12)}
+    .tab-panels{margin-top:12px}
+    .tab-panel{display:none;background:var(--card);padding:14px;border-radius:10px;box-shadow:0 8px 24px rgba(16,24,40,0.04)}
+    .tab-panel.active{display:block}
+
+    /* Popup styles + glow animation */
+    .popup-wrap{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;z-index:100000;pointer-events:none}
+    .popup{width:320px;max-width:92%;background:var(--card);border-radius:14px;padding:18px;box-shadow:0 20px 60px rgba(16,24,40,0.18);text-align:center;transform:translateY(20px) scale(0.98);opacity:0;transition:all 300ms ease;pointer-events:auto}
+    .popup.show{opacity:1;transform:translateY(0) scale(1)}
+    .popup .title{font-weight:900;margin-bottom:6px}
+    .popup .msg{color:var(--muted);margin-bottom:12px}
+    .popup .ok{display:inline-block;padding:10px 14px;border-radius:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:800;text-decoration:none}
+    .popup.glow{animation:popup-glow 1800ms ease-in-out infinite}
+    /* stronger neon ring */
+    .popup.glow::after{content:'';position:absolute;inset:-8px;border-radius:18px;box-shadow:0 10px 40px rgba(255,122,43,0.18);pointer-events:none;filter:blur(8px)}
+    @keyframes popup-glow{0%{box-shadow:0 10px 30px rgba(255,122,43,0.08)}50%{box-shadow:0 20px 50px rgba(255,122,43,0.28)}100%{box-shadow:0 10px 30px rgba(255,122,43,0.08)}}
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-row">
+      <div class="brand">
+        <div class="logo">LD</div>
+        <div>
+          <div class="brand-name">LEELA DENTAL CLINIC</div>
+          <div class="brand-sub">Majlis Park, Delhi – 110033</div>
+        </div>
+      </div>
+      <a class="phone-cta" href="tel:+917217620414">📞 7217620414</a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- HERO -->
+    <div class="hero">
+      <div class="hero-left">
+        <h1>All Dental Treatments<br /><span style="font-size:28px;">UNDER ONE ROOF</span></h1>
+        <p><strong>Professional care • Modern equipment • Painless procedures • Family friendly</strong></p>
+
+        <div class="badge-row">
+          <div class="badge">🦷 RCT</div>
+          <div class="badge">🪥 General Check-up</div>
+          <div class="badge">✨ Whitening</div>
+          <div class="badge">👑 Crowns</div>
+        </div>
+
+        <div class="offer-row">
+          <div class="offer">NO COST EMI</div>
+          <div class="offer-highlight">UP TO 20% OFF</div>
+        </div>
+
+        <div class="metrics">
+          <div class="metric"><strong>200K+</strong><small>Happy Patients</small></div>
+          <div class="metric"><strong>7 Days</strong><small>Open</small></div>
+        </div>
+      </div>
+
+      <!-- FORM -->
+      <aside class="form-card">
+        <h3>Book an Appointment</h3>
+
+        <form id="aptForm">
+          <div class="form-row">
+            <input class="input" id="name" name="name" placeholder="Your name" required />
+            <input class="input" id="phone" name="phone" placeholder="Mobile number" required />
+            <input class="input" id="email" type="email" name="email" placeholder="Email (optional)" />
+            <input class="input" id="datetime" name="datetime" placeholder="Preferred date/time" />
+            <textarea class="input" id="notes" name="notes" rows="3" placeholder="Notes"></textarea>
+            <button class="submit" type="submit">Request Appointment</button>
+          </div>
+          <label class="consent"><input type="checkbox" checked style="margin-top:6px" /> I consent to contact.</label>
+          <div style="margin-top:10px;font-size:13px;color:var(--muted)">
+            <label style="display:inline-flex;align-items:center;gap:8px"><input id="simulateSuccess" type="checkbox" /> Simulate success (for local testing)</label>
+          </div>
+        </form>
+
+        <div style="margin-top:10px;font-size:14px;color:var(--muted)">
+          Or call: <a href="tel:+917217620414">7217620414</a>
+        </div>
+      </aside>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-inner">
+        <h2><strong>About Leela Dental Clinic</strong></h2>
+        <p style="color:var(--muted)">
+          <strong>Leela Dental Clinic</strong> at Majlis Park is a trusted local clinic offering comprehensive dental care.
+        </p>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="section-inner">
+        <h2><strong>Our Services</strong></h2>
+
+        <div class="cards">
+          <div class="service-card" data-service="general">
+            <div class="service-content">
+              <h4>🪥 General Check-up & Cleaning</h4>
+              <p>Preventive care, oral hygiene & routine exams</p>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="rct">
+            <div class="service-content">
+              <h4>🦷 Root Canal Treatment (RCT)</h4>
+              <p>Painless modern root-canal procedures</p>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="whitening">
+            <div class="service-content">
+              <h4>✨ Cosmetic Dentistry & Whitening</h4>
+              <p>Teeth whitening, veneers & smile makeovers</p>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="implants">
+            <div class="service-content">
+              <h4>🦾 Implants & Prosthetics</h4>
+              <p>Dental implants, crowns and bridges</p>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="invisalign">
+            <div class="service-content">
+              <h4>😬 Invisalign & Aligners</h4>
+              <p>Teeth straightening with clear aligners</p>
+            </div>
+          </div>
+
+          <div class="service-card" data-service="crowns">
+            <div class="service-content">
+              <h4>👑 Crowns & Veneers</h4>
+              <p>Cosmetic crowns, laminates & veneers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="badge-row-hero" style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
+          <div class="badge" data-service="rct">🦷 RCT</div>
+          <div class="badge" data-service="general">🪥 General Check-up</div>
+          <div class="badge" data-service="whitening">✨ Whitening</div>
+          <div class="badge" data-service="🦾 Implants & Prosthetics"> 🦾 Implants & Prosthetics</div>
+          <div class="badge" data-service="🪥 General Check‑up & Cleaning"> 🪥 General Check‑up & Cleaning</div>
+          <div class="badge" data-service="crowns">👑 Crowns</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <div class="section-inner">
+        <h2><strong>Patient Reviews</strong></h2>
+
+        <div class="reviews">
+
+          <div class="review">
+            "Professional care and friendly staff — highly recommended."
+            <br /><small>— Public listing</small>
+            <div class="react">⭐ 😊 ❤️</div>
+          </div>
+
+          <div class="review">
+            "Quick appointment; painless treatment experience."
+            <br /><small>— Verified</small>
+            <div class="react">⭐ 😍 👍</div>
+          </div>
+
+          <div class="review">
+            "Doctor explained clearly. Hygienic clinic!"
+            <br /><small>— Local Guide</small>
+            <div class="react">⭐ 😊 🙌</div>
+          </div>
+
+          <div class="review">
+            "Amazing whitening results!"
+            <br /><small>— Whitening Patient</small>
+            <div class="react">⭐ ✨ 😁</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-inner contact-grid">
+
+        <div>
+          <h3><strong>Contact & Location</strong></h3>
+          <p style="color:var(--muted)">
+            <strong>Leela Dental Clinic</strong><br />
+            B-39, Main Road, Majlis Park, Delhi – 110033
+          </p>
+          <p><strong>Phone:</strong> 7217620414</p>
+        </div>
+
+        <div>
+          <h3><strong>Clinic Hours</strong></h3>
+          <p style="color:var(--muted)">Mon–Sat: 10:30–13:00, 17:30–20:00<br />Sun: Closed</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="section-inner">
+        <h2>Frequently Asked Questions (FAQ)</h2>
+
+        <div class="faq-list">
+          <div class="faq-tabs">
+            <div class="tab-controls" role="tablist" aria-label="FAQ Tabs"></div>
+            <div class="tab-panels"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popup (hidden by default) -->
+    <div id="popupWrap" class="popup-wrap" aria-hidden="true" style="display:none">
+      <div id="popup" class="popup" role="dialog" aria-modal="true">
+        <div class="title">Appointment Requested</div>
+        <div class="msg">Thanks — we received your request. We'll call/WhatsApp to confirm.</div>
+        <a href="#" id="popupOk" class="ok">OK</a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Scripts -->
+  <script>
+    /* FAQ tabs — populate from JS so content is easy to update */
+    (function(){
+      const tabs = [
+        { id:'q1', title:'Q1: What services does Leela Dental Clinic provide?', body:'We offer all major dental treatments including RCT, Laser Dentistry, Tooth Extraction, Crowns & Bridges, Implants, Braces, Teeth Whitening, and Dentures.'},
+        { id:'q2', title:'Q2: Do you offer EMI or installment payment plans?', body:'Yes, we offer No-Cost EMI options on selected treatments.'},
+        { id:'q3', title:'Q3: What are your working hours?', body:'We are open 7 Days a Week — 10:00 AM to 9:00 PM.'},
+        { id:'q4', title:'Q4: Is the clinic certified and safe?', body:'Yes, our clinic follows international hygiene standards and sterilization protocols.'},
+        { id:'q5', title:'Q5: How can I book an appointment?', body:'You can call or WhatsApp us at 7217620414 or tap the “Book Appointment” button.'}
+      ];
+
+      const controls = document.querySelector('.tab-controls');
+      const panels = document.querySelector('.tab-panels');
+      if(!controls || !panels) return;
+
+      tabs.forEach((t,i)=>{
+        const btn = document.createElement('button');
+        btn.className = 'tab-btn' + (i===0? ' active':'');
+        btn.type = 'button';
+        btn.dataset.tab = t.id;
+        btn.textContent = t.title;
+        controls.appendChild(btn);
+
+        const panel = document.createElement('div');
+        panel.className = 'tab-panel' + (i===0? ' active':'');
+        panel.id = t.id;
+        panel.innerHTML = `<h3>${t.title}</h3><p style="color:var(--muted)">${t.body}</p>`;
+        panels.appendChild(panel);
+      });
+
+      controls.addEventListener('click', (e)=>{
+        const b = e.target.closest('.tab-btn');
+        if(!b) return;
+        controls.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));
+        panels.querySelectorAll('.tab-panel').forEach(x=>x.classList.remove('active'));
+        b.classList.add('active');
+        const id = b.dataset.tab;
+        const p = panels.querySelector('#'+id);
+        if(p) p.classList.add('active');
+      });
+    })();
+
+    /* Services / badges interactions (kept from original) */
+    (function () {
+      const cards = document.querySelectorAll('.service-card');
+      const badges = document.querySelectorAll('.badge-row-hero .badge');
+
+      function setActiveService(name) {
+        cards.forEach(c => c.classList.toggle('svc-open', c.dataset.service === name));
+        badges.forEach(b => {
+          const active = b.dataset.service === name;
+          b.classList.toggle('active', active);
+          b.classList.toggle('inactive', !active);
+        });
+      }
+
+      cards.forEach(c => c.addEventListener('click', () => setActiveService(c.dataset.service)));
+      badges.forEach(b => b.addEventListener('click', () => setActiveService(b.dataset.service)));
+    })();
+
+    /* Review card expand */
+    document.querySelectorAll('.review').forEach(r => {
+      r.addEventListener('click', () => r.classList.toggle('open'));
+    });
+
+    /* Popup helpers */
+    function showPopup(){
+      const wrap = document.getElementById('popupWrap');
+      const pop = document.getElementById('popup');
+      if(!wrap || !pop) return;
+      wrap.style.display = 'flex';
+      wrap.setAttribute('aria-hidden','false');
+      pop.classList.add('show','glow');
+      setTimeout(()=>{ pop.classList.remove('show','glow'); wrap.style.display='none'; wrap.setAttribute('aria-hidden','true'); }, 3800);
+    }
+    const popupOk = document.getElementById('popupOk');
+    if(popupOk) popupOk.addEventListener('click', (e)=>{ e.preventDefault(); const wrap=document.getElementById('popupWrap'); const pop=document.getElementById('popup'); if(pop) pop.classList.remove('show','glow'); if(wrap) { wrap.style.display='none'; wrap.setAttribute('aria-hidden','true'); } });
+
+    /* Form submit (uses webhook) */
+    (function () {
+      const webhook = "https://studyn8n1.app.n8n.cloud/webhook-test/ede760e2-29f7-4397-9b6a-6b18e5805d09";
+      const form = document.getElementById('aptForm');
+      if(!form) return;
+
+      form.addEventListener('submit', async (e)=>{
+        e.preventDefault();
+        const nameEl = document.getElementById('name');
+        const phoneEl = document.getElementById('phone');
+        const emailEl = document.getElementById('email');
+        const datetimeEl = document.getElementById('datetime');
+        const notesEl = document.getElementById('notes');
+
+        const payload = {
+          name: nameEl ? nameEl.value.trim() : '',
+          phone: phoneEl ? phoneEl.value.trim() : '',
+          email: emailEl ? emailEl.value.trim() : '',
+          datetime: datetimeEl ? datetimeEl.value.trim() : '',
+          notes: notesEl ? notesEl.value.trim() : '',
+          source: 'website'
+        };
+
+        if(!payload.name || !payload.phone){ alert('Please provide name and phone'); return; }
+
+        const submitBtn = form.querySelector('button[type="submit"]');
+        if(submitBtn) submitBtn.disabled = true;
+
+        const simulate = document.getElementById('simulateSuccess');
+        try{
+          // If simulate is checked, skip network and show popup for testing
+          if(simulate && simulate.checked){ form.reset(); showPopup(); }
+          else {
+            const res = await fetch(webhook, { method:'POST', headers:{ 'Content-Type':'application/json' }, body: JSON.stringify(payload) });
+            if(res && res.ok){ form.reset(); showPopup(); } else { alert('Server error'); }
+          }
+        }catch(err){
+          console.error(err);
+          // If fetch fails due to CORS/network, offer simulated success if user enabled it
+          if(simulate && simulate.checked){ form.reset(); showPopup(); }
+          else alert('Network error');
+        }
+
+        if(submitBtn) submitBtn.disabled = false;
+      });
+    })();
+  </script>
+
+  <footer style="text-align:center;margin:32px 0;color:var(--muted);">
+    © 2025 Leela Dental Clinic
+  </footer>
+
+</body>
+</html>
